@@ -1,4 +1,5 @@
 
+//Points in a graph space
 public class Point {
 	
 	final static double MAX_X = 10;

@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+//Path class - Maps out the route between points
 public class Path extends ArrayList<Integer> {
 	private static final long serialVersionUID = -6985652228774998974L;
 	
