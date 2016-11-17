@@ -3,7 +3,7 @@ import java.io.IOException;
 public class AAADriver {
 	
 	public final static double millisecondsperpath = 0.0001854608;
-	public final static String file = "berlin52";
+	public final static String file = "Data/berlin52";
 	
 	public static void main(String[] args) throws IOException {
 		
