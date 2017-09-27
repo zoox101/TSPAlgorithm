@@ -28,13 +28,13 @@ public class AAADriver {
 		
 	}
 	
-	
-
+	//Gets the factorial of a number
 	private static int fact(int input) {
 		if(input == 1) return 1;
 		return input*fact(input-1);
 	}
 	
+	//Returns the expected time to search all possible nodes
 	public static String expectedtime(int nodes) {
 		return "Expected time: " + fact(nodes)*millisecondsperpath/60000 + " minutes";
 	}
