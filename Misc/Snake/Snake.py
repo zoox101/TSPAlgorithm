@@ -15,7 +15,9 @@ print heuristic
 
 tuples = []
 for i in snake:
-    tuples.append((int(i), int(heuristic[int(i)-1])))
+    node = int(i)
+    hst =  int(heuristic[int(i)-1])
+    tuples.append((node, hst))
 
 def count_ops(tuples, value):
     counter = 0
@@ -27,3 +29,8 @@ def count_ops(tuples, value):
 for i in xrange(200):
     if count_ops(tuples, i) != 0:
         print str(i) + ': ' + str(count_ops(tuples, i))
+
+string = ''
+for tuple in tuples:
+    string += str(tuple[1]) + ' '
+print string
