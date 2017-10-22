@@ -15,7 +15,7 @@ public class AAADriver {
 		Draw draw = new Draw(graph);
 		draw.add(path);
 		System.out.println("Best: " + graph.pathLength(path));
-		//draw.add(search);		
+		draw.add(search);		
 		
 		Clock.in();
 		Path mypath = search.run(1000, 100);

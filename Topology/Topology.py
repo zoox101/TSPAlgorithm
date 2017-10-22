@@ -61,6 +61,7 @@ points = []
 for x in xrange(20):
     points.append(generate_point(10))
 
+#Generating paths
 paths = []
 for i in xrange(len(points)):
     paths.append([])
@@ -68,6 +69,7 @@ for i in xrange(len(points)):
         path = generate_path(points, [i,j])
         paths[i].append(path)
 
+#Creating topology
 topology = []
 for i in xrange(len(paths)):
     topology.append([])

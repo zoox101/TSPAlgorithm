@@ -54,14 +54,18 @@ protected void paintComponent(Graphics g) {
 			}
 		}
 		
+		Color[] colors = {Color.BLUE, Color.RED, Color.GREEN};
+		
 		if(search != null) {
-			g.setColor(Color.BLUE);
-			for(int i=0; i<search.matrix.size(); i++) {
-				Point p1 = graph.get(i);
-				Point p2 = graph.get(search.matrix.get(i).get(0));
-				g.drawLine((int)(p1.x*SCALE)+RADIUS, (int)(p1.y*SCALE)+RADIUS, (int)(p2.x*SCALE)+RADIUS, (int)(p2.y*SCALE)+RADIUS);
+			for(int cindex=0; cindex<colors.length; cindex++) {
+				g.setColor(colors[cindex]);
+				for(int i=0; i<search.matrix.size(); i++) {
+					Point p1 = graph.get(i);
+					Point p2 = graph.get(search.matrix.get(i).get(cindex));
+					g.drawLine((int)(p1.x*SCALE)+RADIUS, (int)(p1.y*SCALE)+RADIUS, (int)(p2.x*SCALE)+RADIUS, (int)(p2.y*SCALE)+RADIUS);
+				}
+				
 			}
-			
 		}
 	}
 
